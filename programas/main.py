@@ -6,9 +6,8 @@ if __name__ == '__main__':
     arquivos = todos_arquivos()
     resumos = {}
     for arquivo in arquivos:
-        if arquivo.endswith('.txt'):
-            if arquivo != '*_resumo*':
-                resumos[arquivo] = resumir_texto(retorna_texto(arquivo))
+        if arquivo.endswith('.txt') and not arquivo.endswith('resumo.txt'):
+            resumos[arquivo] = resumir_texto(retorna_texto(arquivo))
     print(resumos, 'AAAAAAAAA')
     for a, b in resumos.items():
         print('nome:', a)

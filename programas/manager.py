@@ -25,7 +25,6 @@ def criar_novo_arquivo(arquivo, texto):
 
     print('terminou xd', novo_nome)
     with open(novo_nome, 'w+') as f:
-        print('entrei no texto e tal')
         f.write(texto)
         return True
     return False
